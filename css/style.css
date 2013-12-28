@@ -1,11 +1,22 @@
+/********************/
+/*** Outside Call ***/
+/********************/
+/* I am calling a Korean based font off Google Beta API */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+/************************/
+/*** Basic formatting ***/
+/************************/
 body {
-  font-family: 'Nunito', sans-serif;
-  color: #FAF3BC;
-  background: #420600 url('img/bg-texture.jpg') repeat;
+  font-family: 'Nanum Gothic', sans-serif;
+  background-color: #FFFFF5;
+  color:#AAAAAA;
+  font-size:1.3em;
 }
 
 a {
-  color: #4FB69F;
+  color: #777;
   text-decoration: none;
 }
 
@@ -16,24 +27,48 @@ h1 {
 
 h2 {
   font-size: 1.500em;
-  color: #B4C34F;
+  color: #545454;
 }
 
-.btn {
-  color: #FAF3BC;
-  background: #4FB69F url('img/texture.png') no-repeat right top;
-  padding: 15px 30px;
-  margin: 40px 0px;
-  border-radius: 25px;
-  text-transform: uppercase;
+img {
+  max-width:100%;
 }
 
-.btn:hover {
-  background-color: #4CC4A7;
+p {
+  margin-top:35px;
+  margin-bottom:20px;
 }
 
+/********************/
+/***  Page parts  ***/
+/********************/
+#intro {
+  margin:50px 0;
+  text-align: center;
+}
+
+#nav{
+  margin:50px 0 0 0;
+  display:inline-block;
+  vertical-align:middle;
+}
+
+.row {
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+#footer {
+  border-top: 2px solid #000;
+  padding: 10px 0px;
+  margin: 15px 0px;
+  text-align: center;
+}
+
+/********************/
+/***  Navigation  ***/
+/********************/
 ul.nav {
-  margin: 120px 0 0 0;
   list-style: none;
   float: right;
 }
@@ -44,32 +79,34 @@ ul.nav li {
 }
 
 ul.nav li a {
-  color: #FAF3BC;
+  color: #AAAAAA;
 }
 
-#intro {
-  margin: 50px 0 75px 0;
+#nav a {
+  color:#AAA;
 }
 
-#new-cupcakes img {
-  border: 8px solid #FAF3BC;
-  margin: 0 0 20px 0;
+#nav a:hover {
+  color:#000;
 }
 
-#featured-cupcake img {
-  border: 8px solid #FAF3BC;
+/********************/
+/*** Random Tools ***/
+/********************/
+.bordered {
+  border-radius:2px;
+  border: 5px solid #444;
 }
 
-#copyright {
-  border-top: 8px solid #2A0400;
-  padding: 10px 0px;
-  margin: 15px 0px;
+.pull-right {
+  float:right;
+}
+
+.centered {
   text-align: center;
+  margin:0;
+  float:left;
 }
-
-
-
-
 
 
 
