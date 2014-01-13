@@ -1,0 +1,148 @@
+/*******************/
+/*** Font Import ***/
+/*******************/
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC);
+
+body{
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size:1.2em;
+	background-color:#FB5949;
+	color:#FFF;
+}
+
+h2 {
+	font-weight: bold;
+	margin:10px;
+}
+
+hr {
+	margin:10px;
+}
+
+ul {
+	padding:10px;
+	list-style: none;
+}
+
+* {
+	margin:0;
+	padding:0;
+}
+
+footer{
+	display:block;
+}
+
+.copyright{
+	padding:20px;
+	font-size:0.8em;
+	color:#999;
+}
+
+img#logo {
+	display:block;
+	margin:20px auto;
+}
+
+
+/*************/
+/*** Tools ***/
+/*************/
+.centered {
+	margin-right:auto;
+	margin-left:auto;
+	text-align: center;
+}
+
+.row {
+	width:100%;
+	overflow:hidden;
+	padding:50px 0;
+}
+
+.orange {
+	background-color: #FB5949;
+}
+
+.black{
+	background-color: #20272D;
+}
+
+.white{
+	background-color: white;
+}
+
+.pull-right {
+	float:right;
+}
+
+.pull-left {
+	float:left;
+}
+
+/******************/
+/*** Menu Parts ***/
+/******************/
+.menu-price {
+	font-size: 5em;
+}
+
+.menu-item-list {
+	font-size:1.3em;
+}
+
+.category {
+	font-weight: bold;
+	margin:10px;
+}
+
+
+.thumb {
+	margin:0;
+	width: 100%;
+	padding:0;
+	background-color: #DDD;
+}
+.thumb img {
+	text-align: center;
+	display:block;
+	margin: 0px auto;
+	max-width: 100%;
+	border:2px solid #DDD;
+	border-radius:2px;
+}
+
+.description {
+	text-align: justify;
+	font-style: italic;
+	font-size: 0.8em;
+	margin:15px 0;
+}
+
+.item-list {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.item-list li{
+	overflow:hidden;
+}
+
+.item-list li:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+    height: 0.5em;
+    border-bottom: 1px dotted;
+}
+
+.name {
+	float:left;
+	padding-right:0.33em;
+}
+
+.price {
+    float:right;
+    padding-left:0.33em;
+}
