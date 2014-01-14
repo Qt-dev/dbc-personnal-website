@@ -4,24 +4,15 @@
   <head>
     <title>Comparison of Javascript &amp; Ruby Loops</title>
     <link href="css/prettify.css" type="text/css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
     
     <script type="text/javascript" src="js/prettify.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
     <script>
-        $(document).on('click', 'h2', function(e) {
-          event.preventDefault();
-
-          $('#accordion').find('.accordion-body').collapse('hide');
-          $(this).parent().next().collapse('show');
-        });
-
-        
         $(document).ready(function(){
           $('#content').find('a').click(function(){
-              $(this).next().slideToggle();
+              $(this).next('.content').slideToggle();
           }).next().hide();
         });
     </script>
@@ -37,11 +28,11 @@
     
     <div class="container" id="column-headers">
       <div class="left_column">
-        <h3>&darr; Ruby &darr;</h3>
+        <h2>&darr; Ruby &darr;</h2>
         <hr>
       </div>
       <div class="right_column">
-        <h3>&darr; Javascript &darr;</h3>
+        <h2>&darr; Javascript &darr;</h2>
         <hr>
       </div>
     </div>
@@ -50,10 +41,10 @@
       <!-- FOR -->
       <a href="#">
         <div class="left_column">
-          <h4>...</h4>
+          <h3>...</h3>
         </div>
         <div class="right_column">
-          <h4>For</h4>
+          <h3>For</h3>
         </div>
       </a>
       <div class="content">
@@ -68,17 +59,17 @@
           <pre class="prettyprint lang-js">
 for (var i=0&#59; i&#60;maximum&#59; i++){
   //Your code here.
-};</pre>
+}</pre>
         </div>
       </div>
 
       <!-- FOR..IN -->
       <a href="#">
         <div class="left_column">
-          <h4>For..in</h4>
+          <h3>For..in</h3>
         </div>
         <div class="right_column">
-          <h4>For..in</h4>
+          <h3>For..in</h3>
         </div>
       </a>
       <div class="content">
@@ -109,120 +100,167 @@ for (var i in object){
       <!-- WHILE -->
       <a href="#">
         <div class="left_column">
-          <h4>While</h4>
+          <h3>While</h3>
         </div>
         <div class="right_column">
-          <h4>While</h4>
+          <h3>While</h3>
         </div>
       </a>
       <div class="content">
         <div class="left_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-rb">This is the code.</pre>
+          <p class="description">This loop execute the code until a condition becomes false. 
+            It is often used with a boolean (use "break" to get out of the loop), or with a 
+            counter variable</p>
+          <pre class="prettyprint lang-rb">
+count = 0 
+while count < 5
+  count++
+  #Do something
+end</pre>
         </div>
         <div class="right_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-js">This is the code.</pre>
+          <p class="description">Same as in Ruby, this loop execute the code until the argument
+            becomes true. It is often used with a boolean (use "break" to get out of the loop), 
+            or with a counter variable</p>
+          <pre class="prettyprint lang-js">
+while(true){
+  //Do something
+  if (finish-test){
+  break
+  };
+}</pre>
         </div> 
       </div>
 
       <!-- DO..WHILE -->
       <a href="#">
         <div class="left_column">
-          <h4>Do..While</h4>
+          <h3>Begin..While</h3>
         </div>
         <div class="right_column">
-          <h4>Do..While</h4>
+          <h3>Do..While</h3>
         </div>
       </a>
       <div class="content">
         <div class="left_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-rb">This is the code.</pre>
+          <p class="description">There is no Do..While in ruby. Instead, you use begin...end while.
+            The use is the same as a while loop, except that it is executed once before the first 
+            test.<br>
+            It is not a proper "loop", but just a way to implement the exact same thing as in Javascript.
+            It is more of "combining" a block notation of ruby (with the begin/end) with a condition
+            to get out of it.</p>
+          <pre class="prettyprint lang-rb">
+count = 0
+begin
+  count++
+  #Do something
+end while count < 5
+          </pre>
         </div>
         <div class="right_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-js">This is the code.</pre>
+          <p class="description">Exactly the same as the while loop, except that this time, the loop
+            is executed once before the first test at the "while".
+            It is a commonly used loop in Javascript, and takes no ";" at the end.</p>
+          <pre class="prettyprint lang-js">
+do{
+  //Do Something
+  if (finish-test){
+  break
+  };
+} while(true)
+          </pre>
         </div> 
       </div>
       
       <!-- UNTIL -->
       <a href="#">
         <div class="left_column">
-          <h4>Until</h4>
+          <h3>Until</h3>
         </div>
         <div class="right_column">
-          <h4>Until</h4>
+          <h3>...</h3>
         </div>
       </a>
       <div class="content">
         <div class="left_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-rb">This is the code.</pre>
+          <p class="description">This executes codes until a threshold is hit, and a condition becomes true.. 
+            You can think of it as the counterpart of the while loop.</p>
+          <pre class="prettyprint lang-rb">
+counter = 0
+until counter > 5
+  #Do something
+  counter++
+end</pre>
         </div>
         <div class="right_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-js">This is the code.</pre>
+          <p class="description">In javascript, there is no until method. Instead, you can use a while statement
+            to test the anti-condition. This example shows the same code as Ruby's example, in Javascript.</p>
+          <pre class="prettyprint lang-js">
+var counter=0
+while(!(counter >= 5)){
+  //Do Something
+  counter++
+}</pre>
         </div> 
       </div>
 
       <!-- EACH -->
       <a href="#">
         <div class="left_column">
-          <h4>Each</h4>
+          <h3>Each</h3>
         </div>
         <div class="right_column">
-          <h4>Each</h4>
+          <h3>...</h3>
         </div>
       </a>
       <div class="content">
         <div class="left_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-rb">This is the code.</pre>
+          <p class="description">This executes a block of code on each rank of an array, or a range.
+            Following the Ruby documentation, the block can be define with do .. end or {}.
+            each_with_index is a sister of the each method that allows you to use the index of the 
+            current loop.</p>
+          <pre class="prettyprint lang-rb">
+array = [1,2,3]
+array.each do
+  #Something
+end</pre>
         </div>
         <div class="right_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-js">This is the code.</pre>
-        </div> 
-      </div>
-
-      <!-- EACH WITH INDEX -->
-      <a href="#">
-        <div class="left_column">
-          <h4>Each with index</h4>
-        </div>
-        <div class="right_column">
-          <h4>Each with index</h4>
-        </div>
-      </a>
-      <div class="content">
-        <div class="left_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-rb">This is the code.</pre>
-        </div>
-        <div class="right_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-js">This is the code.</pre>
+          <p class="description">There is no each method in Javascript. Instead, use a for method.</p>
+          <pre class="prettyprint lang-js">
+var array = [1,2,3]
+for(var i = 0; i < array.length; i++){
+  //Do Something
+} 
+          </pre>
         </div> 
       </div>
 
       <!-- TIMES -->
       <a href="#">
         <div class="left_column">
-          <h4>Times</h4>
+          <h3>Times</h3>
         </div>
         <div class="right_column">
-          <h4>Times</h4>
+          <h3>...</h3>
         </div>
       </a>
       <div class="content">
         <div class="left_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-rb">This is the code.</pre>
+          <p class="description">This loop executes code block a given amount of time.
+            Following Ruby Documentation, the block can be defined either with do .. end or {}. </p>
+          <pre class="prettyprint lang-rb">
+5.times { #Do Something }</pre>
         </div>
         <div class="right_column">
-          <p class="description">This is the description.</p>
-          <pre class="prettyprint lang-js">This is the code.</pre>
+          <p class="description">There is no equivalent in Javascript. One of the good ways to 
+            implement the same code would be to use a for loop that makes the counter go backwards.
+            Just like in this example, you set the variable high, iterates until it gets to 0, and 
+            remove one from it on every loop.</p>
+          <pre class="prettyprint lang-js">
+for(var i = 5; i > 0 ; i--){
+  //Do Something
+}</pre>
         </div> 
       </div>
     </div>

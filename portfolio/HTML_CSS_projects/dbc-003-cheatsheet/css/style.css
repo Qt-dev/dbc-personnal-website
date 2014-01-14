@@ -10,22 +10,27 @@ body {
   font-family: 'Alegreya Sans', sans-serif;
   background-color: #001429;
   color: #C2D6D6;
-  font-size:1.7em;
 }
 
 h1 {
   margin:0;
 }
 
-h1, h3, dd {
+h1, h2, h3, dd {
   text-align:center;
 }
 
 h2 {
   font-size:1.5em;
+  text-transform: uppercase;
+
   margin-bottom:1%;
   clear:both;
-  text-align: center;
+
+}
+
+h3 {
+  font-size:1.3em;
 }
 
 hr {
@@ -38,16 +43,11 @@ a {
   text-decoration: none;
 }
 
-ul {
-  padding-left:2%;
-  padding-right:2%;
-  list-style: none;
-  line-height: 1.5em;
-}
 
-.content {
-}
 
+/**************/
+/* Containers */
+/**************/
 .container {
   width: 1000px;
   margin: 0 auto;
@@ -60,6 +60,14 @@ ul {
   width:100%;
 }
 
+.content {
+  float:left;
+  width:100%;
+}
+
+/***********/
+/* Headers */
+/***********/
 #logo {
   padding:1% 0;
   background-color:#000;
@@ -68,25 +76,17 @@ ul {
 }
 
 #column-headers {
-  padding-top:1.5%;
-  padding-bottom:1.5%;
+  padding:1.5% 0 ;
 }
 
 /*********************/
 /* Column formatting */
 /*********************/
 .left_column, .right_column {
-  width: 50%;
+  width: 47%;
+  padding:0 1%;
   float: left;
-  padding: 0 20px;
   text-align: justify;
-}
-
-
-.left_column > h3, .right_column > h3 {
-  padding:20px 10px 10px 10px;
-  margin:0 10px;
-  text-transform: uppercase;
 }
 
 .left_column {
@@ -100,33 +100,21 @@ ul {
   margin-left:-1px;
 }
 
+
+
 .description {
   margin:5% 0;
-  font-style: italic;
   font-size: 1.1em;
-  height:50%;
-}
-
-.left_column ul {
-  text-align:right;
-}
-
-.left_column h4, .right_column h4 {
-  text-align:center;
 }
 
 /*******************/
 /* Code formatting */
 /*******************/
-pre.prettyprint {
+.prettyprint {
   width:75%;
 
   margin:0 auto 7% auto;
-  padding: 15px;
 
   border:1px solid white;
-  color:white;
   background-color:#777;
-
-  font-size:0.8em;
 }
