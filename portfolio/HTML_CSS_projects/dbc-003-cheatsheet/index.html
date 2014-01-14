@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <title>Comparison of Javascript &amp; Ruby Loops</title>
+    <link href="css/prettify.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    
+    <script type="text/javascript" src="js/prettify.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).on('click', 'h2', function(e) {
+          event.preventDefault();
+
+          $('#accordion').find('.accordion-body').collapse('hide');
+          $(this).parent().next().collapse('show');
+        });
+
+        
+        $(document).ready(function(){
+          $('#content').find('a').click(function(){
+              $(this).next().slideToggle();
+          }).next().hide();
+        });
+    </script>
+  </head>
+  
+  <body onload="prettyPrint()">
+    <div id="logo">
+      <div class="container" >
+        <h1>Comparison of Javascript &amp; Ruby Loops</h1>
+        <dd>Click on a loop name to get a description/example</dd>
+      </div>
+    </div>
+    
+    <div class="container" id="column-headers">
+      <div class="left_column">
+        <h3>&darr; Ruby &darr;</h3>
+        <hr>
+      </div>
+      <div class="right_column">
+        <h3>&darr; Javascript &darr;</h3>
+        <hr>
+      </div>
+    </div>
+
+    <div class="container" id="content">
+      <!-- FOR -->
+      <a href="#">
+        <div class="left_column">
+          <h4>...</h4>
+        </div>
+        <div class="right_column">
+          <h4>For</h4>
+        </div>
+      </a>
+      <div class="content">
+        <div class="left_column">
+          <p class="description">The for loop has different implementation in Ruby
+          according to the situation (each, until, etc).</p>
+        </div>
+        <div class="right_column">
+          <p class="description">This is the go-to tool in Javascript. i is the 
+          index of the loop that you're in.</p>
+        
+          <pre class="prettyprint lang-js">
+for (var i=0&#59; i&#60;maximum&#59; i++){
+  //Your code here.
+};</pre>
+        </div>
+      </div>
+
+      <!-- FOR..IN -->
+      <a href="#">
+        <div class="left_column">
+          <h4>For..in</h4>
+        </div>
+        <div class="right_column">
+          <h4>For..in</h4>
+        </div>
+      </a>
+      <div class="content">
+        <div class="left_column">
+          <p class="description">This iterates through a fixed number 
+          of objects.<br>
+          Here, i is the index of the loop and we have it set to iterate 
+          through 0-5.</p>
+          <pre class="prettyprint lang-rb">
+for i in 0..5
+  #Your code here.
+end</pre>
+        </div>
+        <div class="right_column">
+          <p class="description">This iterates over the property of 
+          an object without taking the order into account.<br>
+          Here, i is the identification of the property (name).
+          If the object is an array, it will instead be the index.</p>
+          <pre class="prettyprint lang-js">
+for (var i in object){
+  if (object.hasOwnProperty(i)){
+    //Your code here
+  }
+}</pre>
+        </div>
+      </div>
+      
+      <!-- WHILE -->
+      <a href="#">
+        <div class="left_column">
+          <h4>While</h4>
+        </div>
+        <div class="right_column">
+          <h4>While</h4>
+        </div>
+      </a>
+      <div class="content">
+        <div class="left_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-rb">This is the code.</pre>
+        </div>
+        <div class="right_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-js">This is the code.</pre>
+        </div> 
+      </div>
+
+      <!-- DO..WHILE -->
+      <a href="#">
+        <div class="left_column">
+          <h4>Do..While</h4>
+        </div>
+        <div class="right_column">
+          <h4>Do..While</h4>
+        </div>
+      </a>
+      <div class="content">
+        <div class="left_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-rb">This is the code.</pre>
+        </div>
+        <div class="right_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-js">This is the code.</pre>
+        </div> 
+      </div>
+      
+      <!-- UNTIL -->
+      <a href="#">
+        <div class="left_column">
+          <h4>Until</h4>
+        </div>
+        <div class="right_column">
+          <h4>Until</h4>
+        </div>
+      </a>
+      <div class="content">
+        <div class="left_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-rb">This is the code.</pre>
+        </div>
+        <div class="right_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-js">This is the code.</pre>
+        </div> 
+      </div>
+
+      <!-- EACH -->
+      <a href="#">
+        <div class="left_column">
+          <h4>Each</h4>
+        </div>
+        <div class="right_column">
+          <h4>Each</h4>
+        </div>
+      </a>
+      <div class="content">
+        <div class="left_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-rb">This is the code.</pre>
+        </div>
+        <div class="right_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-js">This is the code.</pre>
+        </div> 
+      </div>
+
+      <!-- EACH WITH INDEX -->
+      <a href="#">
+        <div class="left_column">
+          <h4>Each with index</h4>
+        </div>
+        <div class="right_column">
+          <h4>Each with index</h4>
+        </div>
+      </a>
+      <div class="content">
+        <div class="left_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-rb">This is the code.</pre>
+        </div>
+        <div class="right_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-js">This is the code.</pre>
+        </div> 
+      </div>
+
+      <!-- TIMES -->
+      <a href="#">
+        <div class="left_column">
+          <h4>Times</h4>
+        </div>
+        <div class="right_column">
+          <h4>Times</h4>
+        </div>
+      </a>
+      <div class="content">
+        <div class="left_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-rb">This is the code.</pre>
+        </div>
+        <div class="right_column">
+          <p class="description">This is the description.</p>
+          <pre class="prettyprint lang-js">This is the code.</pre>
+        </div> 
+      </div>
+    </div>
+  </div>
+</body>
+  
+</html>
