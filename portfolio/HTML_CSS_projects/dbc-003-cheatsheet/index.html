@@ -248,9 +248,11 @@ for(var i = 0; i < array.length; i++){
       <div class="content">
         <div class="left_column">
           <p class="description">This loop executes code block a given amount of time.
-            Following Ruby Documentation, the block can be defined either with do .. end or {}. </p>
+            Following Ruby Documentation, the block can be defined either with do .. end or {}.<br>
+            If you take a number from it (with the notation |variable| inside the block), that
+            variable will take the number of the current loop.</p>
           <pre class="prettyprint lang-rb">
-5.times { #Do Something }</pre>
+5.times { |number| #Do Something with our number taking values of 0 to 4 }</pre>
         </div>
         <div class="right_column">
           <p class="description">There is no equivalent in Javascript. One of the good ways to 
